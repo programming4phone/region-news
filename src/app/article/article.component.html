@@ -4,31 +4,18 @@
 			<div class="meta"><small>{{article.pubDate | timeAgo }}</small></div>
 			<div><strong>{{ article.title }}</strong></div>
 			<div><small><em>{{ article.author }}</em></small></div>
-			<table>
-			<tr>
-			<td ><small>{{ article.description }}</small></td>
-			<td><img *ngIf="article.imageLink" class="ui small left floated image" [src]="article.imageLink"></td>
-			
-			</tr>
-			</table>
+
+			<div class="ui one column grid" *ngIf="!article.imageLink">
+			  <div class="column"><small>{{ article.description }}</small></div>
+			</div>
+
+			<div class="ui grid" *ngIf="article.imageLink">
+				<div class="two column row">
+					<div class="left floated column"><small>{{ article.description }}</small></div>
+					<div class="right floated column"><img class="ui small image" [src]="article.imageLink"></div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
-
-<!--
-<div class="cardMargin">
-	<div class="ui card">
-		<div class="content">
-			<div><strong>{{ article.title }}</strong></div>
-			<div class="meta"><small>{{article.pubDate | date:'shortTime' }}</small></div>
-			<div><small><em>{{ article.author }}</em></small></div>
-			<div style="margin-top:0.2em;"><img *ngIf="article.imageLink" class="ui tiny left floated image" [src]="article.imageLink"><p style="text-align: justify;"><small>{{ article.description }}</small></p></div>
-		</div>
-		<div class="ui bottom attached buttons">
-			<button (click)="readArticle()" class="ui button">Read article</button>
-		</div>
-	</div>
-</div>
--->
-
-

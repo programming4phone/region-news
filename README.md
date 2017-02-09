@@ -8,7 +8,7 @@ The app interacts with with a micro service that actually reads the RSS feed and
 
 The app is currently deployed on [www.programming4phone.com](http://www.programming4phone.com/regionnews/index.html).
 
-*The [Northwest Indiana Times](http://www.nwitimes.com) is a Lee Enterprises newspaper.*
+<small><em>The [Northwest Indiana Times](http://www.nwitimes.com) is a Lee Enterprises newspaper.</em></small>
 
 ## Development stack
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
