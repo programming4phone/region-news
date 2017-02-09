@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { RouterModule, Routes } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common'; 
 
 import { ArticleService } from './services/article.service';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
@@ -57,6 +59,7 @@ const routes: Routes = [
   ],
 	providers: [
 		{ provide: LocationStrategy, useClass: HashLocationStrategy },
+		{ provide: APP_BASE_HREF, useValue: './' },
 		{ provide: ArticleService, useClass: ArticleService }
 	],
   bootstrap: [AppComponent]

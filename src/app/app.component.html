@@ -2,7 +2,8 @@
 	<h2 style="margin-bottom:0.2em;">The Region</h2>
 	<div><small><em>Northwest Indiana news courtesy of <a href="http://www.nwitimes.com" target="_blank">nwitimes.com</a></em>&copy;</small></div>
 </div>
-<div>
+<div class="bannerMargin">
+<!--
 	<div class="ui stackable menu">
 		<a class="item" [routerLink]="['latest']"><small>Latest</small></a>
 		<a class="item" [routerLink]="['lakeco']"><small>Lake County</small></a>
@@ -12,6 +13,24 @@
 		<a class="item" [routerLink]="['national']"><small>National</small></a>
 		<a class="item" [routerLink]="['world']"><small>World</small></a>
 		<a class="item" [routerLink]="['about']"><small>About Us</small></a>
+	</div>
+	-->
+	
+	<div class="ui compact menu">
+	  <div class="ui simple dropdown item">
+		<small>Headlines</small>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" [routerLink]="['latest']"><small>Latest News</small></a>
+			<a class="item" [routerLink]="['lakeco']"><small>Lake County News</small></a>
+			<a class="item" [routerLink]="['porterco']"><small>Porter County News</small></a>
+			<a class="item" [routerLink]="['indiana']"><small>Indiana State News</small></a>
+			<a class="item" [routerLink]="['illinois']"><small>South Suburban News</small></a>
+			<a class="item" [routerLink]="['national']"><small>National News</small></a>
+			<a class="item" [routerLink]="['world']"><small>World News</small></a>
+			<a class="item" [routerLink]="['about']"><small>About Us</small></a>
+		</div>
+	  </div>
 	</div>
 	<router-outlet></router-outlet>
 </div>
